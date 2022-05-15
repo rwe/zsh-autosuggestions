@@ -194,9 +194,7 @@ _zsh_autosuggest_partial_accept() {
 }
 
 () {
-	typeset -ga _ZSH_AUTOSUGGEST_BUILTIN_ACTIONS
-
-	_ZSH_AUTOSUGGEST_BUILTIN_ACTIONS=(
+	typeset -ga _ZSH_AUTOSUGGEST_BUILTIN_ACTIONS=(
 		clear
 		fetch
 		suggest
