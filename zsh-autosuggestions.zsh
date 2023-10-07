@@ -42,14 +42,12 @@ typeset -g ZSH_AUTOSUGGEST_ORIGINAL_WIDGET_PREFIX=autosuggest-orig-
 # Strategies to use to fetch a suggestion
 # Will try each strategy in order until a suggestion is returned
 (( ! ${+ZSH_AUTOSUGGEST_STRATEGY} )) && {
-	typeset -ga ZSH_AUTOSUGGEST_STRATEGY
-	ZSH_AUTOSUGGEST_STRATEGY=(history)
+	typeset -ga ZSH_AUTOSUGGEST_STRATEGY=(history)
 }
 
 # Widgets that clear the suggestion
 (( ! ${+ZSH_AUTOSUGGEST_CLEAR_WIDGETS} )) && {
-	typeset -ga ZSH_AUTOSUGGEST_CLEAR_WIDGETS
-	ZSH_AUTOSUGGEST_CLEAR_WIDGETS=(
+	typeset -ga ZSH_AUTOSUGGEST_CLEAR_WIDGETS=(
 		history-search-forward
 		history-search-backward
 		history-beginning-search-forward
@@ -67,8 +65,7 @@ typeset -g ZSH_AUTOSUGGEST_ORIGINAL_WIDGET_PREFIX=autosuggest-orig-
 
 # Widgets that accept the entire suggestion
 (( ! ${+ZSH_AUTOSUGGEST_ACCEPT_WIDGETS} )) && {
-	typeset -ga ZSH_AUTOSUGGEST_ACCEPT_WIDGETS
-	ZSH_AUTOSUGGEST_ACCEPT_WIDGETS=(
+	typeset -ga ZSH_AUTOSUGGEST_ACCEPT_WIDGETS=(
 		forward-char
 		end-of-line
 		vi-forward-char
@@ -79,15 +76,13 @@ typeset -g ZSH_AUTOSUGGEST_ORIGINAL_WIDGET_PREFIX=autosuggest-orig-
 
 # Widgets that accept the entire suggestion and execute it
 (( ! ${+ZSH_AUTOSUGGEST_EXECUTE_WIDGETS} )) && {
-	typeset -ga ZSH_AUTOSUGGEST_EXECUTE_WIDGETS
-	ZSH_AUTOSUGGEST_EXECUTE_WIDGETS=(
+	typeset -ga ZSH_AUTOSUGGEST_EXECUTE_WIDGETS=(
 	)
 }
 
 # Widgets that accept the suggestion as far as the cursor moves
 (( ! ${+ZSH_AUTOSUGGEST_PARTIAL_ACCEPT_WIDGETS} )) && {
-	typeset -ga ZSH_AUTOSUGGEST_PARTIAL_ACCEPT_WIDGETS
-	ZSH_AUTOSUGGEST_PARTIAL_ACCEPT_WIDGETS=(
+	typeset -ga ZSH_AUTOSUGGEST_PARTIAL_ACCEPT_WIDGETS=(
 		forward-word
 		emacs-forward-word
 		vi-forward-word
@@ -101,8 +96,7 @@ typeset -g ZSH_AUTOSUGGEST_ORIGINAL_WIDGET_PREFIX=autosuggest-orig-
 
 # Widgets that should be ignored (globbing supported but must be escaped)
 (( ! ${+ZSH_AUTOSUGGEST_IGNORE_WIDGETS} )) && {
-	typeset -ga ZSH_AUTOSUGGEST_IGNORE_WIDGETS
-	ZSH_AUTOSUGGEST_IGNORE_WIDGETS=(
+	typeset -ga ZSH_AUTOSUGGEST_IGNORE_WIDGETS=(
 		orig-\*
 		beep
 		run-help
